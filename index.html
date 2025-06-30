@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tạo Mã QR Thanh Toán</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tạo Mã QR Thanh Toán</h1>
+    <input id="name" type="text" placeholder="Tên người nhận" />
+    <input id="account" type="text" placeholder="Số tài khoản" />
+
+    <div class="dropdown" id="bankBtn">-- Chọn ngân hàng --</div>
+    <div class="dropdown-list" id="bankListWrapper">
+      <input type="text" id="bankSearch" placeholder="Tìm ngân hàng..." />
+      <div id="bankList"></div>
+    </div>
+
+    <input id="amount" type="text" placeholder="Nhập số tiền" />
+    <input id="desc" type="text" placeholder="Nội dung chuyển khoản" />
+
+    <div id="controls">
+      <button id="generate">Tạo QR</button>
+      <button id="download" style="display:none;">Tải mã</button>
+      <button id="reset" style="display:none;">Đổi thông tin</button>
+    </div>
+
+    <div id="loader">⏳ Đang tạo mã QR...</div>
+    <div id="qrCode"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
